@@ -1118,7 +1118,7 @@ rangy.createModule("DomUtil", function(api, module) {
         if (isOrphan(range.startContainer) || isOrphan(range.endContainer) ||
                 !isValidOffset(range.startContainer, range.startOffset) ||
                 !isValidOffset(range.endContainer, range.endOffset)) {
-            throw new Error("Range error: Range is no longer valid after DOM mutation (" + range.inspect() + ")");
+            throw new Error("Range errors: Range is no longer valid after DOM mutation (" + range.inspect() + ")");
         }
     }
 
@@ -4980,7 +4980,7 @@ wysihtml5.dom.parse = (function() {
     
     // set attributes on newNode
     for (attributeName in attributes) {
-      // Setting attributes can cause a js error in IE under certain circumstances
+      // Setting attributes can cause a js errors in IE under certain circumstances
       // eg. on a <img> under https when it's new attribute value is non-https
       // TODO: Investigate this further and check for smarter handling
       try {
@@ -5460,7 +5460,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
       this.getDocument = function() { return iframe.contentWindow.document; };
 
       // Catch js errors and pass them to the parent's onerror event
-      // addEventListener("error") doesn't work properly in some browsers
+      // addEventListener("errors") doesn't work properly in some browsers
       // TODO: apparently this doesn't work in IE9!
       iframeWindow.onerror = function(errorMessage, fileName, lineNumber) {
         throw new Error("wysihtml5.Sandbox: " + errorMessage, fileName, lineNumber);
@@ -6061,7 +6061,7 @@ wysihtml5.quirks.cleanPastedHTML = (function() {
       var node = range.createContextualFragment(placeholderHTML);
       range.insertNode(node);
       
-      // Make sure that a potential error doesn't cause our placeholder element to be left as a placeholder
+      // Make sure that a potential errors doesn't cause our placeholder element to be left as a placeholder
       try {
         method(range.startContainer, range.endContainer);
       } catch(e3) {
@@ -8300,7 +8300,7 @@ wysihtml5.views.View = Base.extend(
    */
   var focusWithoutScrolling = function(element) {
     if (element.setActive) {
-      // Following line could cause a js error when the textarea is invisible
+      // Following line could cause a js errors when the textarea is invisible
       // See https://github.com/xing/wysihtml5/issues/9
       try { element.setActive(); } catch(e) {}
     } else {

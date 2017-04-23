@@ -2,8 +2,8 @@ var Login = function () {
 
 	var handleLogin = function() {
 		$('.login-form').validate({
-	            errorElement: 'span', //default input error message container
-	            errorClass: 'help-block', // default input error message class
+	            errorElement: 'span', //default input errors message container
+	            errorClass: 'help-block', // default input errors message class
 	            focusInvalid: false, // do not focus the last invalid input
 	            rules: {
 	                username: {
@@ -26,17 +26,17 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display errors alert on form submit   
 	                $('.alert-danger', $('.login-form')).show();
 	            },
 
-	            highlight: function (element) { // hightlight error inputs
+	            highlight: function (element) { // hightlight errors inputs
 	                $(element)
-	                    .closest('.form-group').addClass('has-error'); // set error class to the control group
+	                    .closest('.form-group').addClass('has-error'); // set errors class to the control group
 	            },
 
 	            success: function (label) {
-	                label.closest('.form-group').removeClass('has-error');
+	                label.closest('.form-group').removeClass('has-errors');
 	                label.remove();
 	            },
 
@@ -61,8 +61,8 @@ var Login = function () {
 
 	var handleForgetPassword = function () {
 		$('.forget-form').validate({
-	            errorElement: 'span', //default input error message container
-	            errorClass: 'help-block', // default input error message class
+	            errorElement: 'span', //default input errors message container
+	            errorClass: 'help-block', // default input errors message class
 	            focusInvalid: false, // do not focus the last invalid input
 	            ignore: "",
 	            rules: {
@@ -78,17 +78,17 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display errors alert on form submit   
 
 	            },
 
-	            highlight: function (element) { // hightlight error inputs
+	            highlight: function (element) { // hightlight errors inputs
 	                $(element)
-	                    .closest('.form-group').addClass('has-error'); // set error class to the control group
+	                    .closest('.form-group').addClass('has-error'); // set errors class to the control group
 	            },
 
 	            success: function (label) {
-	                label.closest('.form-group').removeClass('has-error');
+	                label.closest('.form-group').removeClass('has-errors');
 	                label.remove();
 	            },
 
@@ -142,14 +142,14 @@ var Login = function () {
 
 
 			$('#select2_sample4').change(function () {
-                $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+                $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show errors or success message for the input
             });
 
 
 
          $('.register-form').validate({
-	            errorElement: 'span', //default input error message container
-	            errorClass: 'help-block', // default input error message class
+	            errorElement: 'span', //default input errors message container
+	            errorClass: 'help-block', // default input errors message class
 	            focusInvalid: false, // do not focus the last invalid input
 	            ignore: "",
 	            rules: {
@@ -192,17 +192,17 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display errors alert on form submit   
 
 	            },
 
-	            highlight: function (element) { // hightlight error inputs
+	            highlight: function (element) { // hightlight errors inputs
 	                $(element)
-	                    .closest('.form-group').addClass('has-error'); // set error class to the control group
+	                    .closest('.form-group').addClass('has-error'); // set errors class to the control group
 	            },
 
 	            success: function (label) {
-	                label.closest('.form-group').removeClass('has-error');
+	                label.closest('.form-group').removeClass('has-errors');
 	                label.remove();
 	            },
 

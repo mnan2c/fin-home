@@ -439,6 +439,7 @@ Header and header elements.
 }
 
 .header.navbar .navbar-brand img {
+  margin-top: -7px;
   margin-left: 20px;
 }
 

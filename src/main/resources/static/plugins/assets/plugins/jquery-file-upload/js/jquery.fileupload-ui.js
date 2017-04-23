@@ -120,7 +120,7 @@
                         data.context.each(function (index) {
                             var error = data.files[index].error;
                             if (error) {
-                                $(this).find('.error').text(error);
+                                $(this).find('.errors').text(error);
                             }
                         });
                     }
@@ -200,7 +200,7 @@
                     );
                 }
             },
-            // Callback for failed (abort or error) uploads:
+            // Callback for failed (abort or errors) uploads:
             fail: function (e, data) {
                 if (e.isDefaultPrevented()) {
                     return false;

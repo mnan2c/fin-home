@@ -426,7 +426,7 @@ var ComponentsFormTools = function () {
             var pop = $(this);
 
             if (input.val() === "") {
-                input.closest('.form-group').removeClass('has-success').addClass('has-error');
+                input.closest('.form-group').removeClass('has-success').addClass('has-errors');
 
                 pop.popover('destroy');
                 pop.popover({
@@ -435,7 +435,7 @@ var ComponentsFormTools = function () {
                     'container': 'body',
                     'content': 'Please enter a username to check its availability.',
                 });
-                // add error class to the popover
+                // add errors class to the popover
                 pop.data('bs.popover').tip().addClass('error');
                 // set last poped popover to be closed on click(see App.js => handlePopovers function)     
                 App.setLastPopedPopover(pop);
@@ -463,7 +463,7 @@ var ComponentsFormTools = function () {
                 removeClass("spinner");
 
                 if (res.status == 'OK') {
-                    input.closest('.form-group').removeClass('has-error').addClass('has-success');
+                    input.closest('.form-group').removeClass('has-errors').addClass('has-success');
 
                     pop.popover('destroy');
                     pop.popover({
@@ -475,7 +475,7 @@ var ComponentsFormTools = function () {
                     pop.popover('show');
                     pop.data('bs.popover').tip().removeClass('error').addClass('success');
                 } else {
-                    input.closest('.form-group').removeClass('has-success').addClass('has-error');
+                    input.closest('.form-group').removeClass('has-success').addClass('has-errors');
 
                     pop.popover('destroy');
                     pop.popover({
@@ -515,12 +515,12 @@ var ComponentsFormTools = function () {
 
                 // change popover font color based on the result
                 if (res.status == 'OK') {
-                    input.closest('.form-group').removeClass('has-error').addClass('has-success');
+                    input.closest('.form-group').removeClass('has-errors').addClass('has-success');
                     $('.icon-exclamation-sign', input.closest('.form-group')).remove();
                     input.before('<i class="icon-ok"></i>');
                     input.data('bs.popover').tip().removeClass('error').addClass('success');
                 } else {
-                    input.closest('.form-group').removeClass('has-success').addClass('has-error');
+                    input.closest('.form-group').removeClass('has-success').addClass('has-errors');
                     $('.icon-ok', input.closest('.form-group')).remove();
                     input.before('<i class="icon-exclamation-sign"></i>');
 

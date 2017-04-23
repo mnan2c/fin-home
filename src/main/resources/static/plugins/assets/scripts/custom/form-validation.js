@@ -9,8 +9,8 @@ var FormValidation = function () {
             var success1 = $('.alert-success', form1);
 
             form1.validate({
-                errorElement: 'span', //default input error message container
-                errorClass: 'help-block', // default input error message class
+                errorElement: 'span', //default input errors message container
+                errorClass: 'help-block', // default input errors message class
                 focusInvalid: false, // do not focus the last invalid input
                 ignore: "",
                 rules: {
@@ -46,25 +46,25 @@ var FormValidation = function () {
                     }
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit              
+                invalidHandler: function (event, validator) { //display errors alert on form submit              
                     success1.hide();
                     error1.show();
                     App.scrollTo(error1, -200);
                 },
 
-                highlight: function (element) { // hightlight error inputs
+                highlight: function (element) { // hightlight errors inputs
                     $(element)
-                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                        .closest('.form-group').addClass('has-error'); // set errors class to the control group
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight
                     $(element)
-                        .closest('.form-group').removeClass('has-error'); // set error class to the control group
+                        .closest('.form-group').removeClass('has-error'); // set errors class to the control group
                 },
 
                 success: function (label) {
                     label
-                        .closest('.form-group').removeClass('has-error'); // set success class to the control group
+                        .closest('.form-group').removeClass('has-errors'); // set success class to the control group
                 },
 
                 submitHandler: function (form) {
@@ -84,8 +84,8 @@ var FormValidation = function () {
             var success2 = $('.alert-success', form2);
 
             form2.validate({
-                errorElement: 'span', //default input error message container
-                errorClass: 'help-block', // default input error message class
+                errorElement: 'span', //default input errors message container
+                errorClass: 'help-block', // default input errors message class
                 focusInvalid: false, // do not focus the last invalid input
                 ignore: "",
                 rules: {
@@ -119,21 +119,21 @@ var FormValidation = function () {
                     },
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit              
+                invalidHandler: function (event, validator) { //display errors alert on form submit              
                     success2.hide();
                     error2.show();
                     App.scrollTo(error2, -200);
                 },
 
-                errorPlacement: function (error, element) { // render error placement for each input type
+                errorPlacement: function (error, element) { // render errors placement for each input type
                     var icon = $(element).parent('.input-icon').children('i');
                     icon.removeClass('fa-check').addClass("fa-warning");  
                     icon.attr("data-original-title", error.text()).tooltip({'container': 'body'});
                 },
 
-                highlight: function (element) { // hightlight error inputs
+                highlight: function (element) { // hightlight errors inputs
                     $(element)
-                        .closest('.form-group').addClass('has-error'); // set error class to the control group   
+                        .closest('.form-group').addClass('has-error'); // set errors class to the control group   
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight
@@ -171,8 +171,8 @@ var FormValidation = function () {
             })
 
             form3.validate({
-                errorElement: 'span', //default input error message container
-                errorClass: 'help-block', // default input error message class
+                errorElement: 'span', //default input errors message container
+                errorClass: 'help-block', // default input errors message class
                 focusInvalid: false, // do not focus the last invalid input
                 ignore: "",
                 rules: {
@@ -224,43 +224,43 @@ var FormValidation = function () {
                     }
                 },
 
-                errorPlacement: function (error, element) { // render error placement for each input type
+                errorPlacement: function (error, element) { // render errors placement for each input type
                     if (element.parent(".input-group").size() > 0) {
                         error.insertAfter(element.parent(".input-group"));
-                    } else if (element.attr("data-error-container")) { 
-                        error.appendTo(element.attr("data-error-container"));
+                    } else if (element.attr("data-errors-container")) { 
+                        error.appendTo(element.attr("data-errors-container"));
                     } else if (element.parents('.radio-list').size() > 0) { 
-                        error.appendTo(element.parents('.radio-list').attr("data-error-container"));
+                        error.appendTo(element.parents('.radio-list').attr("data-errors-container"));
                     } else if (element.parents('.radio-inline').size() > 0) { 
-                        error.appendTo(element.parents('.radio-inline').attr("data-error-container"));
+                        error.appendTo(element.parents('.radio-inline').attr("data-errors-container"));
                     } else if (element.parents('.checkbox-list').size() > 0) {
-                        error.appendTo(element.parents('.checkbox-list').attr("data-error-container"));
+                        error.appendTo(element.parents('.checkbox-list').attr("data-errors-container"));
                     } else if (element.parents('.checkbox-inline').size() > 0) { 
-                        error.appendTo(element.parents('.checkbox-inline').attr("data-error-container"));
+                        error.appendTo(element.parents('.checkbox-inline').attr("data-errors-container"));
                     } else {
                         error.insertAfter(element); // for other inputs, just perform default behavior
                     }
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit   
+                invalidHandler: function (event, validator) { //display errors alert on form submit   
                     success3.hide();
                     error3.show();
                     App.scrollTo(error3, -200);
                 },
 
-                highlight: function (element) { // hightlight error inputs
+                highlight: function (element) { // hightlight errors inputs
                    $(element)
-                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                        .closest('.form-group').addClass('has-error'); // set errors class to the control group
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight
                     $(element)
-                        .closest('.form-group').removeClass('has-error'); // set error class to the control group
+                        .closest('.form-group').removeClass('has-error'); // set errors class to the control group
                 },
 
                 success: function (label) {
                     label
-                        .closest('.form-group').removeClass('has-error'); // set success class to the control group
+                        .closest('.form-group').removeClass('has-errors'); // set success class to the control group
                 },
 
                 submitHandler: function (form) {
@@ -272,7 +272,7 @@ var FormValidation = function () {
 
              //apply validation on select2 dropdown value change, this only needed for chosen dropdown integration.
             $('.select2me', form3).change(function () {
-                form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+                form3.validate().element($(this)); //revalidate the chosen dropdown value and show errors or success message for the input
             });
     }
 

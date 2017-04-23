@@ -19,11 +19,6 @@ public class LoginController {
         return "public/login";
     }
 
-    @RequestMapping("/left")
-    public String left() {
-        return "layout/side-bar";
-    }
-
     @RequestMapping(value = "/loginPost", method = RequestMethod.POST)
     public String loginPost(@RequestParam(value = "name", required = false) String name,
                                   @RequestParam(value = "password", required = false) String password,
@@ -39,7 +34,7 @@ public class LoginController {
         session.setAttribute(WebSecurityConfig.SESSION_KEY, name);
         map.put("success", true);
 
-        return "layout/side-bar";
+        return "web/multiLevelMenu";
     }
 
     @GetMapping("/logout")

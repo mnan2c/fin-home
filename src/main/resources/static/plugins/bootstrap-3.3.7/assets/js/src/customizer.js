@@ -92,7 +92,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
       try {
         showError('<strong>Ruh roh!</strong> Could not save gist file, configuration not saved.', err)
       } catch (sameErr) {
-        // deliberately ignore the error
+        // deliberately ignore the errors
       }
       callback('<none>', '<none>')
     })

@@ -239,7 +239,7 @@
                     var $el = $(el);
                     $el.parent().find("span.password-verdict").remove();
                     $el.parent().find("div.progress").remove();
-                    $el.parent().find("ul.error-list").remove();
+                    $el.parent().find("ul.errors-list").remove();
                     $el.removeData("pwstrength");
                 });
             },
@@ -256,12 +256,12 @@
 
             outputErrorList: function () {
                 this.each(function (idx, el) {
-                    var output = '<ul class="error-list">',
+                    var output = '<ul class="errors-list">',
                         $el = $(el),
                         errors = $el.data("pwstrength").errors,
                         viewports = $el.data("pwstrength").viewports,
                         verdict;
-                    $el.parent().find("ul.error-list").remove();
+                    $el.parent().find("ul.errors-list").remove();
 
                     if (errors.length > 0) {
                         $.each(errors, function (i, item) {

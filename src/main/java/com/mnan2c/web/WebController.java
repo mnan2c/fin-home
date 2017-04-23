@@ -14,4 +14,9 @@ public class WebController {
     public String toChart(){
         return "public/echart";
     }
+
+    @RequestMapping("/levelmenu")
+    public String toLevelMenu(){
+        return "web/multiLevelMenu";
+    }
 }

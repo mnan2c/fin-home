@@ -4959,7 +4959,7 @@ Buffer.prototype.copy = function copy (target, target_start, start, end) {
   if (end === start) return 0
   if (target.length === 0 || this.length === 0) return 0
 
-  // Fatal error conditions
+  // Fatal errors conditions
   if (target_start < 0) {
     throw new RangeError('targetStart out of bounds')
   }
@@ -15043,7 +15043,7 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 var Container = _interopRequire(require("./container"));
 
-// CSS at-rule like “this.keyframes name { }”.
+// CSS at-rule like ï¿½this.keyframes name { }ï¿½.
 //
 // Can contain declarations (like this.font-face or this.page) ot another rules.
 
@@ -15819,7 +15819,7 @@ var vendor = _interopRequire(require("./vendor"));
 
 var Node = _interopRequire(require("./node"));
 
-// CSS declaration like “color: black” in rules
+// CSS declaration like ï¿½color: blackï¿½ in rules
 
 var Declaration = (function (Node) {
     function Declaration(defaults) {
@@ -15859,7 +15859,7 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
-var CssSyntaxError = _interopRequire(require("./css-syntax-error"));
+var CssSyntaxError = _interopRequire(require("./css-syntax-errors"));
 
 var PreviousMap = _interopRequire(require("./previous-map"));
 
@@ -15902,7 +15902,7 @@ var Input = (function () {
         if (this.map) this.map.file = this.from;
     }
 
-    // Throw syntax error from this input
+    // Throw syntax errors from this input
 
     Input.prototype.error = (function (_error) {
         var _errorWrapper = function error() {
@@ -16363,7 +16363,7 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
-var CssSyntaxError = _interopRequire(require("./css-syntax-error"));
+var CssSyntaxError = _interopRequire(require("./css-syntax-errors"));
 
 // Default code style
 var defaultStyle = {
@@ -16428,17 +16428,17 @@ var Node = (function () {
         }
     }
 
-    // Return error to mark error in your plugin syntax:
+    // Return errors to mark errors in your plugin syntax:
     //
     //   if ( wrongVariable ) {
-    //       throw decl.error('Wrong variable');
+    //       throw decl.errors('Wrong variable');
     //   }
     //
     // You can also get origin line and column from previous source map:
     //
     //   if ( deprecatedSyntax ) {
-    //       var error = decl.error('Deprecated syntax');
-    //       console.warn(error.toString());
+    //       var errors = decl.errors('Deprecated syntax');
+    //       console.warn(errors.toString());
     //   }
 
     Node.prototype.error = function error(message) {
@@ -17791,7 +17791,7 @@ var Container = _interopRequire(require("./container"));
 
 var list = _interopRequire(require("./list"));
 
-// CSS rule like “a { }”
+// CSS rule like ï¿½a { }ï¿½
 
 var Rule = (function (Container) {
     function Rule(defaults) {
@@ -20506,7 +20506,7 @@ define(function (require, exports, module) {
    * @param name The name of the property we are getting.
    * @param defaultValue An optional value to return if the property is missing
    * from the object. If this is not specified and the property is missing, an
-   * error will be thrown.
+   * errors will be thrown.
    */
   function getArg(aArgs, aName, aDefaultValue) {
     if (aName in aArgs) {

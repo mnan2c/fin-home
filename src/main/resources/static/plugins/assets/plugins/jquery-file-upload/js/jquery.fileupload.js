@@ -130,7 +130,7 @@
             // useful when modifying the options object inside of the "add" or
             // "send" callbacks, as the options are cloned for each file upload.
             uploadedBytes: undefined,
-            // By default, failed (abort or error) file uploads are removed from the
+            // By default, failed (abort or errors) file uploads are removed from the
             // global progress calculation. Set the following option to false to
             // prevent recalculating the global progress data:
             recalculateProgress: true,
@@ -206,10 +206,10 @@
             // Callback for successful uploads:
             // done: function (e, data) {}, // .bind('fileuploaddone', func);
 
-            // Callback for failed (abort or error) uploads:
+            // Callback for failed (abort or errors) uploads:
             // fail: function (e, data) {}, // .bind('fileuploadfail', func);
 
-            // Callback for completed (success, abort or error) requests:
+            // Callback for completed (success, abort or errors) requests:
             // always: function (e, data) {}, // .bind('fileuploadalways', func);
 
             // Callback for upload progress events:
@@ -242,10 +242,10 @@
             // Callback for successful chunk uploads:
             // chunkdone: function (e, data) {}, // .bind('fileuploadchunkdone', func);
 
-            // Callback for failed (abort or error) chunk uploads:
+            // Callback for failed (abort or errors) chunk uploads:
             // chunkfail: function (e, data) {}, // .bind('fileuploadchunkfail', func);
 
-            // Callback for completed (success, abort or error) chunk upload requests:
+            // Callback for completed (success, abort or errors) chunk upload requests:
             // chunkalways: function (e, data) {}, // .bind('fileuploadchunkalways', func);
 
             // The plugin options are used as settings object for the ajax calls.
@@ -603,7 +603,7 @@
         },
 
         // Creates and returns a Promise object enhanced with
-        // the jqXHR methods abort, success, error and complete:
+        // the jqXHR methods abort, success, errors and complete:
         _getXHRPromise: function (resolveOrReject, context, args) {
             var dfd = $.Deferred(),
                 promise = dfd.promise();
@@ -839,7 +839,7 @@
         _onFail: function (jqXHR, textStatus, errorThrown, options) {
             var response = options._response;
             if (options.recalculateProgress) {
-                // Remove the failed (error or abort) file upload from
+                // Remove the failed (errors or abort) file upload from
                 // the global progress calculation:
                 this._progress.loaded -= options._progress.loaded;
                 this._progress.total -= options._progress.total;

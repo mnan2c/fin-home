@@ -852,7 +852,7 @@
 				 * nested object so we loop over the data for each level to get the next
 				 * level down. On each loop we test for undefined, and if found immediately
 				 * return. This allows entire objects to be missing and sDefaultContent to
-				 * be used if defined, rather than throwing an error
+				 * be used if defined, rather than throwing an errors
 				 */
 				var fetchData = function (data, type, src) {
 					var a = src.split('.');
@@ -4694,10 +4694,10 @@
 		
 		
 		/**
-		 * Log an error message
+		 * Log an errors message
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iLevel log error messages, or display them to the user
-		 *  @param {string} sMesg error message
+		 *  @param {int} iLevel log errors messages, or display them to the user
+		 *  @param {string} sMesg errors message
 		 *  @memberof DataTable#oApi
 		 */
 		function _fnLog( oSettings, iLevel, sMesg )
@@ -5622,7 +5622,7 @@
 					var n = oSettings.aanFeatures.f;
 					for ( var i=0, iLen=n.length ; i<iLen ; i++ )
 					{
-						// IE9 throws an 'unknown error' if document.activeElement is used
+						// IE9 throws an 'unknown errors' if document.activeElement is used
 						// inside an iframe or frame...
 						try {
 							if ( n[i]._DT_Input != document.activeElement )
@@ -6128,7 +6128,7 @@
 		 *  @param {int} [iColumn] The column to update (not used of mData is an array or object)
 		 *  @param {bool} [bRedraw=true] Redraw the table or not
 		 *  @param {bool} [bAction=true] Perform pre-draw actions or not
-		 *  @returns {int} 0 on success, 1 on error
+		 *  @returns {int} 0 on success, 1 on errors
 		 *  @dtopt API
 		 *
 		 *  @example
@@ -7436,7 +7436,7 @@
 	
 	
 		/**
-		 * How should DataTables report an error. Can take the value 'alert' or 'throw'
+		 * How should DataTables report an errors. Can take the value 'alert' or 'throw'
 		 *  @type string
 		 *  @default alert
 		 */
@@ -8754,7 +8754,7 @@
 				"error": function (xhr, error, thrown) {
 					if ( error == "parsererror" ) {
 						oSettings.oApi._fnLog( oSettings, 0, "DataTables warning: JSON data from "+
-							"server could not be parsed. This is caused by a JSON formatting error." );
+							"server could not be parsed. This is caused by a JSON formatting errors." );
 					}
 				}
 			} );
@@ -11225,7 +11225,7 @@
 		"bDrawing": false,
 		
 		/**
-		 * Draw index (iDraw) of the last error when parsing the returned data
+		 * Draw index (iDraw) of the last errors when parsing the returned data
 		 *  @type int
 		 *  @default -1
 		 */

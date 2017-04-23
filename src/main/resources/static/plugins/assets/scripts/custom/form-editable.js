@@ -46,7 +46,7 @@ var FormEditable = function () {
         });
 
         $.mockjax({
-            url: '/error',
+            url: '/errors',
             status: 400,
             statusText: 'Bad Request',
             response: function (settings) {

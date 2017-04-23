@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="http://v3.bootcss.com/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link href="http://v3.bootcss.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+<body>
+    <header th:replace="layout/header :: header"></header>
+    <aside th:replace="layout/sidebar :: aside"></aside>
+    <footer th:replace="layout/footer :: footer"></footer>
+
+    <!--import js-->
+    <script src="../plugins/assets/scripts/core/app.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

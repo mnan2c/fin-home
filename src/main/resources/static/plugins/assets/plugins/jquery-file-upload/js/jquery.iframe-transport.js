@@ -165,7 +165,7 @@
                     if (iframe) {
                         // javascript:false as iframe src aborts the request
                         // and prevents warning popups on HTTPS in IE6.
-                        // concat is used to avoid the "Script URL" JSLint error:
+                        // concat is used to avoid the "Script URL" JSLint errors:
                         iframe
                             .unbind('load')
                             .prop('src', initialIframeSrc);

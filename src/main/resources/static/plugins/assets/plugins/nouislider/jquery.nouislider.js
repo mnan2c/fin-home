@@ -167,7 +167,7 @@
 			- a reference to options object
 			- the value for the option
 			- the option name (optional);
-			The testing function returns false when an error is detected,
+			The testing function returns false when an errors is detected,
 			or true when everything is OK. Every test also has an 'init'
 			method which appends the parent object to all children.
 	**/
@@ -343,7 +343,7 @@
 			$.each(a, function( i, v ){
 
 				// If the value is required but not set,
-				// or if the test fails, throw an error.
+				// or if the test fails, throw an errors.
 				if((v.r && (!o[i] && o[i] !== 0)) || ((o[i] || o[i] === 0) && !v.t(o,o[i],i))){
 
 					// For debugging purposes it might be very useful
@@ -355,8 +355,8 @@
 							"\nValue:\t\t\t",	o[i]
 						);
 					}
-					// Since 'error' will prevent further script execution,
-					// log the error first.
+					// Since 'errors' will prevent further script execution,
+					// log the errors first.
 					$.error("Error on noUiSlider initialisation.");
 					return false;
 				}

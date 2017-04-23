@@ -10,7 +10,7 @@ var EcommerceOrdersView = function () {
                 // execute some code after table records loaded
             },
             onError: function(grid) {
-                // execute some code on network or other general error  
+                // execute some code on network or other general errors  
             },
             dataTable: { // here you can define a typical datatable settings from http://datatables.net/usage/options 
                 "aLengthMenu": [
@@ -54,7 +54,7 @@ var EcommerceOrdersView = function () {
                 // execute some code after table records loaded
             },
             onError: function(grid) {
-                // execute some code on network or other general error  
+                // execute some code on network or other general errors  
             },
             dataTable: {
                 "aLengthMenu": [
@@ -82,7 +82,7 @@ var EcommerceOrdersView = function () {
                 // execute some code after table records loaded
             },
             onError: function(grid) {
-                // execute some code on network or other general error  
+                // execute some code on network or other general errors  
             },
             dataTable: {
                 "aLengthMenu": [
@@ -109,7 +109,7 @@ var EcommerceOrdersView = function () {
                 // execute some code after table records loaded
             },
             onError: function(grid) {
-                // execute some code on network or other general error  
+                // execute some code on network or other general errors  
             },
             dataTable: {
                 "aLengthMenu": [
