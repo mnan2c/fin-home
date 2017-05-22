@@ -1,6 +1,7 @@
 package com.mnan2c.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -15,8 +16,8 @@ public class WebController {
         return "public/echart";
     }
 
-    @RequestMapping("/levelmenu")
-    public String toLevelMenu(){
-        return "web/multiLevelMenu";
+    @RequestMapping("/{demoCase}")
+    public String demoCase1(@PathVariable String demoCase){
+        return "web/" + demoCase;
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +12,17 @@
     <!-- Custom styles for this template -->
     <link href="http://v3.bootcss.com/examples/dashboard/dashboard.css" rel="stylesheet">
     <link href="http://v3.bootcss.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
-    <link href="css/selfdefine.css" rel="stylesheet">
+    <link href="/css/selfdefine.css" rel="stylesheet">
 </head>
 <body>
     <header th:replace="layout/header :: header"></header>
     <aside th:replace="layout/sidebar :: aside"></aside>
     <footer th:replace="layout/footer :: footer"></footer>
-
     <!--import js-->
-    <script src="../plugins/assets/scripts/core/app.js"></script>
-    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <!--<script src="http://libs.baidu.com/jquery/1.12.4/jquery.js"></script>-->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/plugins/assets/scripts/core/app.js"></script>
+    <div layout:fragment="custom-js"></div>
 </body>
 </html>

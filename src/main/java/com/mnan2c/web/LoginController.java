@@ -34,7 +34,7 @@ public class LoginController {
         session.setAttribute(WebSecurityConfig.SESSION_KEY, name);
         map.put("success", true);
 
-        return "web/multiLevelMenu";
+        return "web/demoCase1";
     }
 
     @GetMapping("/logout")
